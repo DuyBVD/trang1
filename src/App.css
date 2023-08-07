@@ -1,31 +1,139 @@
-.App {
-  text-align: center;
-}
+.box{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  font-size: 100%;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
+.box1{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+  
 }
-
-.App-link {
-  color: #61dafb;
+.box1 h1{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
 }
-
-
+.box1 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+}
+.box2 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box2 h2{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+}
+.box3 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box3 h3{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.box4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+}
+.box4 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box4 h4{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.box5{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+}
+.box5 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box5 h5{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.box6{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  background-color: rgb(240, 239, 239);
+}
+.box6 input{
+  display: flex;
+  justify-content:right;
+  width:80%;
+  height: 30px;
+  margin-left:5px ;
+  background-color: aqua;
+}
+.box6 h6{
+  display: flex;
+  font-size: 20px;
+  margin-top: 0px;
+}
+.Done{
+  display: flex;
+  justify-items: end;
+  font-size: 20px;
+  width: 60px;
+  color: aliceblue;
+  background-color: rgb(16, 98, 192);
+  border-radius: 5px;
+}
