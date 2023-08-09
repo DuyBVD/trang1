@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div class="box">
-      <p>ĐĂNG KÍ TÀI KHOẢN</p>
+      <p>ĐĂNG KÍ TÀI KHOẢN ahihihi</p>
         <div class="box1">
           <h1>TÊN ĐĂNG NHẬP:</h1>
           <input type="text" id="username" name="username" placeholder="Tên đăng nhập"></input>
