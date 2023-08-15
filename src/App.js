@@ -1,39 +1,26 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link, NavLink, Routes } from "react-router-dom";
+import Login from './pages/login';
 import './App.css';
+import Register from './pages/register/register';
 
 function App() {
   return (
-    <div class="box">
-      <p>ĐĂNG KÍ TÀI KHOẢN ahihihi</p>
-        <div class="box1">
-          <h1>TÊN ĐĂNG NHẬP:</h1>
-          <input type="text" id="username" name="username" placeholder="Tên đăng nhập"></input>
-        </div>
-        <div class="box2">
-          <h2>MẬT KHẨU:</h2>  
-          <input type="password" id="pwd" name="pwd" placeholder="Mật khẩu"></input>
-        </div>
-        <div class="box3">
-          <h3>NHẬP LẠI MẬT KHẨU:</h3>  
-          <input type="password" id="pwd" name="pwd" placeholder="Nhập lại mật khẩu"></input>
-        </div>
-        <div class="box4">
-          <h4>HỌ TÊN:</h4>
-          <input type="text" id="username" name="username" placeholder="Họ tên"></input>
-        </div>
-        <div class="box5">
-          <h5>EMAIL:</h5>
-          <input type="text" id="email" name="email" placeholder="Nhập email"></input>
-        </div>
-        <div class="box6">
-          <h6>SỐ ĐIỆN THOẠI:</h6>  
-          <input type="number" id="sdt" name="sdt" placeholder="Nhập số điện thoại "></input>
-        </div>
-        <hr></hr>
-        <button class="Done">GỬI</button>
-             
+    <Router>
+    <div className="App">
+        <Routes>
+          <Route path="/" exact element={<Login></Login>} />
+          <Route path="/about" element={<Register></Register>} />
+        </Routes>
+        {/* <Route path="/contact" component={Contact} />
+        <Route component={NotFound}/> */}
     </div>
- 
+
+    {/* <div> */}
+      {/* <Login /> */}
+      {/* <Register/> */}
+      
+    {/* </div> */}
+    </Router>
   );
 }
 
