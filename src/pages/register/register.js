@@ -5,16 +5,19 @@ function Register() {
   const [ showInput, setShowInput ] = useState({})
 
 
-  console.log(showInput);
+  // console.log(showInput);
   function onsubmit(){
-    
-    alert(showInput.name
-      + showInput.pwd 
-      + showInput.pwds 
-      + '\n'+showInput.user
-      + showInput.email
-      );
-    
+    // var showInput= JSON.parse(localStorage.setItem('showInput')); // = null
+    // localStorage.removeItem('email')
+    localStorage.setItem('showInput', JSON.stringify(showInput));
+    // if (showInput) {
+    //   alert(showInput.name
+    //     + '\n'+showInput.pwd 
+    //     + '\n'+showInput.pwds 
+    //     + '\n'+showInput.user
+    //     + '\n'+showInput.email
+    //     );
+    // }
   }
   function changeInput(props) {
     if (props.target.name === 'username') {
@@ -55,7 +58,6 @@ function Register() {
         sdt: props.target.value
       }))
     }
-
   }
   return (
     <div class="container-register">
@@ -87,11 +89,9 @@ function Register() {
         </div>
         <hr></hr>
         <div className='done'>
-          <button onClick={onsubmit} type='submit' value='submit' >ĐĂNG KÍ</button>
+        <Link to={'/register'}><button onClick={onsubmit} type='submit' value='submit' >ĐĂNG KÍ</button></Link> 
         </div>
-        <div className="router">
-          <Link to={'/'}><button className="back" type='submit'></button></Link> 
-        </div>
+        
       </div>
     </div>
   );
