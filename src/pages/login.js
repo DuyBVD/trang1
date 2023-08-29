@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, NavLink, useNavigate } from "react-router-dom";
 import './login.css';
 import { useState } from 'react';
 import { VscAccount } from "react-icons/vsc";
 import { AiOutlineLock } from "react-icons/ai";
 
 function Login() {
-
-  const [ showInput, setShowInput ] = useState({})
+  const navigate = useNavigate();
+  const [showInput, setShowInput] = useState({})
 
   console.log(showInput);
   let dataRp = [''];
@@ -16,11 +16,17 @@ function Login() {
     let dataLocal = JSON.parse(localStorage.getItem('showInput'));
     console.log(dataLocal.email);
 
-    if (dataRp.email == dataLocal.email, dataRp.password == dataLocal.pwd) {
-      alert('nhap thanh cong');
+    if (dataRp.email === dataLocal.email && dataRp.password === dataLocal.pwd) {
+      navigate('/')
     }
-    else{
-      alert('ban nhap sai');
+    else {
+      if (dataRp.email !== dataLocal.email) {
+        alert('ban nhap sai mail');
+      } else if (dataRp.password !== dataLocal.pwd) {
+        alert('ban nhap sai pasword');
+      } 
+
+      console.log('datarp', dataRp);
     }
   }
 
@@ -32,8 +38,8 @@ function Login() {
       }))
     }
 
-    if (props.target.name === 'pwd'){
-      setShowInput(oldData =>({
+    if (props.target.name === 'pwd') {
+      setShowInput(oldData => ({
         ...oldData,
         password: props.target.value
       }))
@@ -49,13 +55,13 @@ function Login() {
           <div className='form-input-box'>
             <div className="form-item">
               <span className="icon"><VscAccount size={32} /></span>
-              <input onChange={changeInput} className="form-input" id="email" name="email"type="text" placeholder="Email or phone number "></input>
+              <input onChange={changeInput} className="form-input" id="email" name="email" type="text" placeholder="Email or phone number "></input>
             </div>
           </div>
           <div className='form-input-box'>
             <div className="form-item">
               <span className="icon"><AiOutlineLock size={32} /></span>
-              <input onChange={changeInput} className="form-input" id='password'name="pwd" type="password" placeholder="Password"></input>
+              <input onChange={changeInput} className="form-input" id='password' name="pwd" type="password" placeholder="Password"></input>
             </div>
           </div>
           <div className='forgot-password'>
